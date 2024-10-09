@@ -1,15 +1,57 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        try {
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+
+            // Crea frazioni
+            Frazione f1 = new Frazione(5, 7);
+            Frazione f2 = new Frazione(135, 945);
+
+
+            // Stampa frazioni
+            System.out.println("Frazione 1:");
+            f1.stampa();
+            System.out.println("Frazione 2:");
+            f2.stampa();
+
+
+            // Semplifica
+            f2 = f2.semplifica();
+            System.out.println("Frazione 2 semplificata:");
+            f2.stampa();
+
+
+            // Stampa calcoli
+            System.out.println("Valore reale di Frazione 1: " + f1.calcola());
+            System.out.println("Valore reale di Frazione 2: " + f2.calcola());
+
+
+            // Operazioni
+            Frazione f3 = f1.add(f2);
+            System.out.println("Frazione 1 + Frazione 2:");
+            f3.stampa();
+
+            Frazione f4 = f1.mul(f2);
+            System.out.println("Frazione 1 * Frazione 2:");
+            f4.stampa();
+
+            Frazione f5 = f1.sub(f2);
+            System.out.println("Frazione 1 - Frazione 2:");
+            f5.stampa();
+
+            Frazione f6 = f1.div(f2);
+            System.out.println("Frazione 1 / Frazione 2:");
+            f6.stampa();
+
+
+            //  Confronta frazioni
+            System.out.println("Frazione 1 è uguale a Frazione 2? " + f1.equals(f2));
+            System.out.println("Frazione 1 è maggiore di Frazione 2? " + f1.isGreat(f2));
+            System.out.println("Frazione 1 è minore di Frazione 2? " + f1.isLess(f2));
+
+
+        } catch (DenZeroException e) {
+            System.out.println("Errore: " + e.getMessage());
         }
     }
 }
