@@ -9,10 +9,13 @@ public class Frazione implements Operatore {
     }
 
     // Costruttore con parametri
-    public Frazione(int numeratore, int denominatore) throws DenZeroException {
+    public Frazione(int numeratore, int denominatore) throws InvalidArgumentException {
         if (denominatore == 0) {
-            throw new DenZeroException("Denominatore nullo");
-        }
+            throw new InvalidArgumentException("Denominatore nullo");
+        };
+        if (numeratore < 0 || denominatore < 0) {
+            throw new InvalidArgumentException("Non sono consentiti valori negativi perchè pensiamo positivo e i negativi sono difficili da gestire ;)");
+        };
         this.numeratore = numeratore;
         this.denominatore = denominatore;
     }
@@ -33,38 +36,38 @@ public class Frazione implements Operatore {
     }
 
     // Metodo per la somma di due frazioni
-    public Frazione add(Frazione frz2) throws DenZeroException {
+    public Frazione add(Frazione frz2) throws InvalidArgumentException {
         int mcdDenominatore = mcd(denominatore, frz2.denominatore);
         int nuovoNumeratore = numeratore * (mcdDenominatore / denominatore) + frz2.numeratore * (mcdDenominatore / frz2.denominatore);
         return new Frazione(nuovoNumeratore, mcdDenominatore);
     }
 
     // Metodo per la differenza di due frazioni
-    public Frazione sub(Frazione frz2) throws DenZeroException {
+    public Frazione sub(Frazione frz2) throws InvalidArgumentException {
         int mcdDenominatore = mcd(denominatore, frz2.denominatore);
         int nuovoNumeratore = numeratore * (mcdDenominatore / denominatore) - frz2.numeratore * (mcdDenominatore / frz2.denominatore);
         return new Frazione(nuovoNumeratore, mcdDenominatore);
     }
 
     // Metodo per la moltiplicazione di due frazioni
-    public Frazione mul(Frazione frz2) throws DenZeroException {
+    public Frazione mul(Frazione frz2) throws InvalidArgumentException {
         int nuovoNumeratore = numeratore * frz2.numeratore;
         int nuovoDenominatore = denominatore * frz2.denominatore;
         return new Frazione(nuovoNumeratore, nuovoDenominatore);
     }
 
     // Metodo per la divisione di due frazioni
-    public Frazione div(Frazione frz2) throws DenZeroException {
+    public Frazione div(Frazione frz2) throws InvalidArgumentException {
         return mul(frz2.inv());
     }
 
     // Metodo per invertire la frazione
-    public Frazione inv() throws DenZeroException {
+    public Frazione inv() throws InvalidArgumentException {
         return new Frazione(denominatore, numeratore);
     }
 
     // Metodo per semplificare la frazione
-    public Frazione semplifica() throws DenZeroException {
+    public Frazione semplifica() throws InvalidArgumentException {
         int MCD = MCD(numeratore, denominatore);
         return new Frazione(numeratore / MCD, denominatore / MCD);
     }

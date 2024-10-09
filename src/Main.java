@@ -5,6 +5,8 @@ public class Main {
 
             // Crea frazioni
             Frazione f1 = new Frazione(5, 7);
+            //f1 = new Frazione(-5, 7); //test per frazione negativa
+            //f1 = new Frazione(5, 0); //test per denominatore zero
             Frazione f2 = new Frazione(135, 945);
 
 
@@ -50,7 +52,7 @@ public class Main {
             System.out.println("Frazione 1 è minore di Frazione 2? " + f1.isLess(f2));
 
 
-        } catch (DenZeroException e) {
+        } catch (InvalidArgumentException e) {
             System.out.println("Errore: " + e.getMessage());
         }
     }

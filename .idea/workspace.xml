@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78e5b139-c651-43f3-8e4e-8ad927002a43" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DenZeroException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Frazione.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Operatore.java" afterDir="false" />
+    <list default="true" id="78e5b139-c651-43f3-8e4e-8ad927002a43" name="Changes" comment="Consegna">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DenZeroException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InvalidArgumentException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Frazione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Frazione.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +38,9 @@
     "accountId": "3052bd2b-2308-4f1b-9e42-aa7ac184a63a"
   }
 }]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 3
 }]]></component>
@@ -51,8 +54,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.Verifica1.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -64,6 +69,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Verifica1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -89,11 +99,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728453148722</updated>
-      <workItem from="1728453149794" duration="3484000" />
+      <workItem from="1728453149794" duration="4543000" />
     </task>
+    <task id="LOCAL-00001" summary="Consegna">
+      <option name="closed" value="true" />
+      <created>1728456899032</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728456899032</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Consegna" />
+    <option name="LAST_COMMIT_MESSAGE" value="Consegna" />
   </component>
 </project>
